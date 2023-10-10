@@ -18,8 +18,10 @@ TOKEN=${TOKEN:-}
 USE_FFMPEG_ENV_VAR=${USE_FFMPEG_ENV_VAR:-true}
 JSON_FILE="/app/config.json"
 
-# Create the JSON configuration in the /apps/ folder
-cat <<EOF > "$JSON_FILE"
+# Check if the config file already exists
+if [ ! -f "$JSON_FILE" ]; then
+  # Create the JSON configuration in the /app/ folder
+  cat <<EOF > "$JSON_FILE"
 {
     "email": "$EMAIL",
     "password": "$PASSWORD",
@@ -30,6 +32,7 @@ cat <<EOF > "$JSON_FILE"
     "useFfmpegEnvVar": $USE_FFMPEG_ENV_VAR
 }
 EOF
+fi
 
 # Execute the application with optional arguments
 su appuser -c "/app/Nugs-DL $*"
