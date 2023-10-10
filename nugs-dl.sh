@@ -32,6 +32,9 @@ if [ ! -f "$JSON_FILE" ]; then
     "useFfmpegEnvVar": $USE_FFMPEG_ENV_VAR
 }
 EOF
+  echo "Config file created: $JSON_FILE"
+else
+  echo "Config file already exists: $JSON_FILE"
 fi
 
 # Execute the application with optional arguments
