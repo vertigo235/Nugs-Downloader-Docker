@@ -22,11 +22,11 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    repo: vertigo235/nugs-downlaoder-docker
+    repo: vertigo235/nugs-downloader-docker
     tags: 
         - '${DRONE_BRANCH}'
         - '${DRONE_BRANCH}-${DRONE_COMMIT:0:6}'
-    cache_from: vertigo235/nugs-downlaoder-docker
+    cache_from: vertigo235/nugs-downloader-docker
   when:
     branch:
       exclude:
@@ -42,12 +42,12 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    repo: vertigo235/nugs-downlaoder-docker
+    repo: vertigo235/nugs-downloader-docker
     tags:
       - latest
       - '1'
-      - '1.1'
-      - '1.1.${DRONE_BUILD_NUMBER}'
+      - '1.0'
+      - '1.0.${DRONE_BUILD_NUMBER}'
   when:
     branch:
       - master
