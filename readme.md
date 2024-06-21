@@ -10,13 +10,13 @@ docker build -t nugs-downloader .
 
 2. Create a .env file with your environment variables, e.g., config.env:
 
-EMAIL=youremail@email.com
-PASSWORD=your_password
-FORMAT=4
-VIDEO_FORMAT=5
-OUT_PATH=/downloads
-TOKEN=
-USE_FFMPEG_ENV_VAR=true
+NUGS_EMAIL=youremail@email.com
+NUGS_PASSWORD=your_password
+NUGS_FORMAT=4
+NUGS_VIDEO_FORMAT=5
+NUGS_OUT_PATH=/downloads
+NUGS_TOKEN=
+NUGS_USE_FFMPEG_ENV_VAR=true
 PUID=1000
 PGID=1000
 
@@ -30,13 +30,13 @@ Replace /your/host/downloads with the host path where you want to store download
 
 ## Environment Variables
 
-- EMAIL: Your email address.
-- PASSWORD: Your password.
-- FORMAT: Format value (default: 4).
-- VIDEO_FORMAT: Video format value (default: 5).
-- OUT_PATH: Output path for downloads (default: "/downloads").
-- TOKEN: Your token (leave empty if not needed).
-- USE_FFMPEG_ENV_VAR: Use Ffmpeg environment variable (default: true).
+- NUGS_EMAIL: Your email address.
+- NUGS_PASSWORD: Your password.
+- NUGS_FORMAT: Format value (default: 4).
+- NUGS_VIDEO_FORMAT: Video format value (default: 5).
+- NUGS_OUT_PATH: Output path for downloads (default: "/downloads").
+- NUGS_TOKEN: Your token (leave empty if not needed).
+- NUGS_USE_FFMPEG_ENV_VAR: Use Ffmpeg environment variable (default: true).
 - PUID: User ID for the app user (default: 1000).
 - PGID: Group ID for the app group (default: 1000).
 
