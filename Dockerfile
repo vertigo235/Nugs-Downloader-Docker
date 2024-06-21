@@ -25,5 +25,8 @@ RUN apt clean
 # Create a directory for downloads and set permissions
 RUN mkdir /downloads && chmod 777 /downloads
 
+# Change permissions of the working directory
+RUN chmod -R 777 /app
+
 # Set the entry point to run the script
 ENTRYPOINT ["/app/nugs-dl.sh"]
