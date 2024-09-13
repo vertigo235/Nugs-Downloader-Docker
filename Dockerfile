@@ -5,7 +5,7 @@ WORKDIR /build
 
 # Install dependencies and build the application
 RUN apt update && apt install -y --no-install-recommends git ffmpeg && \
-    git clone https://github.com/Sorrow446/Nugs-Downloader.git . && \
+    git clone https://github.com/vertigo235/Nugs-Downloader.git . && \
     go build -o Nugs-DL main.go structs.go
 
 # Final Stage
